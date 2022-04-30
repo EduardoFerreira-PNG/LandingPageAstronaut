@@ -3,6 +3,10 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
+body *{
+    box-sizing: border-box;
+}
+
 .login{
     display: flex;
     width: 100vw;
@@ -117,4 +121,44 @@ body{
 .btn__login:hover{
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 940px){
+    .card__login{
+        width: 85%;
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .login{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login__right > h1{
+        display: none;
+    }
+
+    .login__left{
+        width: 50vw;
+    }
+    .login__right{
+        width: 100%;
+        height: auto;
+    }
+
+    .login__image{
+        margin-top: 0;
+        height: auto;
+        width: 44vw;
+    }
+
+    .card__login{
+        margin-left: 35px;
+        margin-bottom: 10px;
+       
+    }
 }
